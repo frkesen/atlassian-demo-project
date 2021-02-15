@@ -1,0 +1,30 @@
+{
+    "key": "demo-project",
+    "name": "Demo Project",
+    "description": "My very first app",
+    "baseUrl": "{{localBaseUrl}}",
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed"
+    },
+    "scopes": [
+        "READ"
+    ],
+    "modules": {
+        "generalPages": [
+            {
+                "key": "demo-project-page-jira",
+                "location": "system.top.navigation.bar",
+                "name": {
+                    "value": "Demo Project"
+                },
+                "url": "/demo-project",
+                "conditions": [{
+                    "condition": "user_is_logged_in"
+                }]
+            }
+        ]
+    }
+}
